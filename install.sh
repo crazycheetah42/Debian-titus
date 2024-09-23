@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-username=$(id -u -n 1000)
+username=$(whoami)
 builddir=$(pwd)
 
 # Update packages list and update system
