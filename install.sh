@@ -54,12 +54,10 @@ fc-cache -vf
 # Removing zip Files
 rm ./FiraCode.zip ./Meslo.zip
 
-# Install Nordzy cursor
-git clone https://github.com/alvatip/Nordzy-cursors
-cd Nordzy-cursors
-./install.sh
+# Install Simp1e cursors (dwm-titus)
 cd $builddir
-rm -rf Nordzy-cursors
+tar -xvf Simp1e.tar.xz
+mv Simp1e /usr/share/icons/
 
 # Install brave-browser
 nala install apt-transport-https curl -y
