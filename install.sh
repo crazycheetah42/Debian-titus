@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-username=$(id -u -n 1000)
+username=$(whoami)
 builddir=$(pwd)
 
 echo "Which browser would you like to install? Please select 1, 2, 3, or 4"
@@ -70,12 +70,10 @@ fc-cache -vf
 # Removing zip Files
 rm ./FiraCode.zip ./Meslo.zip
 
-# Install Nordzy cursor
-git clone https://github.com/alvatip/Nordzy-cursors
-cd Nordzy-cursors
-./install.sh
+# Install Simp1e cursors (dwm-titus)
 cd $builddir
-rm -rf Nordzy-cursors
+tar -xvf Simp1e.tar.xz
+mv Simp1e /usr/share/icons/
 
 # Install browser of choice
 case "$browser_choice" in

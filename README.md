@@ -1,8 +1,5 @@
 # Debian-titus
 Debian customizations from Chris Titus Tech
- 
-## Requirements
-_This install changes Debian to the SID (Dev) Branch_
 
 ### Download Debian Testing netinstall
 
@@ -12,6 +9,7 @@ Use the following Debian ISO as the base <https://cdimage.debian.org/cdimage/wee
 ### To install:
 
 ```
+sudo apt install git
 git clone https://github.com/ChrisTitusTech/debian-titus
 cd debian-titus
 sudo ./install.sh
