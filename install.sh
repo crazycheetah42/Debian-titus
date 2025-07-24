@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-username=$(whoami)
+username=$(id -u -n 1000)
 builddir=$(pwd)
 
 echo "Which browser would you like to install? Please select 1, 2, 3, or 4"
